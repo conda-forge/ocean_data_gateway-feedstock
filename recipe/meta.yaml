@@ -1,5 +1,5 @@
 {% set name = "ocean_data_gateway" %}
-{% set version = "0.3" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ocean_data_gateway-{{ version }}.tar.gz
-  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
+  sha256: 96bb82e2177d57f338ab1a419bf993f4cca5039250d9d28c02fa6b30380fba24
 
 build:
   number: 0
