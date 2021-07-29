@@ -1,5 +1,5 @@
 {% set name = "ocean_data_gateway" %}
-{% set version = "21" %}
+{% set version = "0.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ocean_data_gateway-{{ version }}.tar.gz
-  sha256: dba51b20b8cd12cd492586538f14c2a1923b15a695063af99ddfc5c3b312a58d
+  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
 
 build:
   number: 0
@@ -25,8 +25,10 @@ requirements:
     - dask-core
     - erddapy
     - flake8
+    - h5netcdf
     - intake
     - intake-xarray
+    - ioos_qc
     - ipython
     - isort
     - joblib
@@ -36,6 +38,9 @@ requirements:
     - netcdf4
     - numpy
     - pandas
+    - pint
+    - pint-pandas
+    - pint-xarray
     - pytest
     - python >=3.6
     - requests
