@@ -1,5 +1,5 @@
 {% set name = "ocean_data_gateway" %}
-{% set version = "21" %}
+{% set version = "0.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ocean_data_gateway-{{ version }}.tar.gz
-  sha256: dba51b20b8cd12cd492586538f14c2a1923b15a695063af99ddfc5c3b312a58d
+  sha256: 274cfb2351abf3a96c7ca57a54bd8fe0aec0e5c87e6c2b15672f78b7c2fe5fd3
 
 build:
   number: 0
@@ -22,11 +22,14 @@ requirements:
     - setuptools-scm
   run:
     - aiohttp
+    - cf_xarray
     - dask-core
     - erddapy
     - flake8
+    - h5netcdf
     - intake
     - intake-xarray
+    - ioos_qc
     - ipython
     - isort
     - joblib
@@ -36,6 +39,9 @@ requirements:
     - netcdf4
     - numpy
     - pandas
+    - pint
+    - pint-pandas
+    - pint-xarray
     - pytest
     - python >=3.6
     - requests
