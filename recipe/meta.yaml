@@ -59,7 +59,7 @@ test:
     - pip
   # need these files included in the package
   source_files:
-    - variables
+    - variables/*
 
 about:
   home: https://github.com/axiom-data-science/ocean_data_gateway
