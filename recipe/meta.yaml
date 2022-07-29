@@ -11,7 +11,7 @@ source:
   sha256: 657f46cf64ba9c5e1432a3d9a2a7cb1dad16857c0702bd87eef048ffe1fcf1b0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -57,6 +57,9 @@ test:
     - pip check
   requires:
     - pip
+  # need these files included in the package
+  source_files:
+    - ocean_data_gateway/variables
 
 about:
   home: https://github.com/axiom-data-science/ocean_data_gateway
