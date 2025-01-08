@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ocean_data_gateway-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ocean_data_gateway-{{ version }}.tar.gz
   sha256: 4c6c662c995a426814c16a87f58b606c1d1edf253f8e2634781b2962b4d62c1c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - aiohttp
@@ -44,7 +44,7 @@ requirements:
     - pint-pandas
     - pint-xarray
     - pytest
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - scipy
     - shapely
@@ -58,6 +58,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/axiom-data-science/ocean_data_gateway
